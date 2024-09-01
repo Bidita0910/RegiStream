@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AYUSH Startup Registration Portal</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <header>
+        <div id="logos" aria-label="Ministry of AYUSH and AIIA Logos">
+            <img src="ayush-logo.png" alt="Ministry of AYUSH Logo" class="header-logo">
+        </div>
+        <h1>AYUSH Startup Registration Portal</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#login-form" onclick="showSection('login-form')">Login</a></li>
+            <li><a href="#registration-form" onclick="showSection('registration-form')">Register</a></li>
+            <li><a href="#support-resources" onclick="showSection('support-resources')">Support & Resources</a></li>
+        </ul>
+    </nav>
+
+    <div id="login-form">
+        <h2>Login</h2>
+        <form id="login" onsubmit="return loginUser()">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div id="registration-form" style="display:none;">
+        <h2>Startup Registration</h2>
+        <form id="registration" onsubmit="return submitApplication()">
+            <input type="text" id="startupName" placeholder="Startup Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="contact" placeholder="Contact Number" required>
+            <textarea id="description" placeholder="Description" required></textarea>
+            <label for="documents">Upload Documents:</label>
+            <input type="file" id="documents" multiple required>
+            <button type="submit">Submit Application</button>
+        </form>
+        <div id="status">
+            <h3>Application Status</h3>
+            <p id="statusText">No application submitted yet.</p>
+        </div>
+    </div>
+
+    <div id="support-resources" style="display:none;">
+        <h2>Support & Resources</h2>
+        <ul>
+            <li><a href="#" onclick="showSupportSection('faq')">FAQs</a></li>
+            <li><a href="#" onclick="showSupportSection('guidelines')">Registration Guidelines</a></li>
+            <li><a href="#" onclick="showSupportSection('contact-support')">Contact Support</a></li>
+        </ul>
+
+        <div id="faq" class="support-content" style="display:none;">
+            <h3>Frequently Asked Questions</h3>
+            <p>Q: What is AYUSH?</p>
+            <p>A: AYUSH stands for Ayurveda, Yoga & Naturopathy, Unani, Siddha, and Homoeopathy. It encompasses traditional medical systems in India.</p>
+            <p>Q: How can I register my startup?</p>
+            <p>A: You can register your startup by filling out the registration form available on this portal.</p>
+            <!-- Add more FAQs as needed -->
+        </div>
+
+        <div id="guidelines" class="support-content" style="display:none;">
+            <h3>Registration Guidelines</h3>
+            <p>Here are the guidelines for registering your startup:</p>
+            <ul>
+                <li>Ensure all required documents are ready before submission.</li>
+                <li>Fill out all mandatory fields in the registration form.</li>
+                <li>Review your application before submitting to avoid errors.</li>
+                <!-- Add more guidelines as needed -->
+            </ul>
+        </div>
+
+        <div id="contact-support" class="support-content" style="display:none;">
+            <h3>Contact Support</h3>
+            <p>If you need assistance, please reach out to us:</p>
+            <p>Email: support@ayushportal.in</p>
+            <p>Phone: +91-123-456-7890</p>
+            <p>Address: AYUSH Building, New Delhi, India</p>
+            <!-- Add more contact methods if available -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 AYUSH Startup Registration Portal</p>
+    </footer>
+
+    <script src="script2.js"></script>
+</body>
+</html>
